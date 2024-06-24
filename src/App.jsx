@@ -1,25 +1,16 @@
 import { useState } from 'react'
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import './App.scss'
+import { Auth, Home } from './pages/index'
 
 function App() {
-  const [items, setItems] = useState(['adilnur', 'картошка', 'стул'])
-  const [inputVal, setInputVal] = useState()
-
-  const addItem = () => {
-    setItems([...items, inputVal])
-  }
 
   return (
     <>
-      <input type="text" onChange={(e) => setInputVal(e.target.value)} value={inputVal} />
-      <button onClick={addItem}>Change a item</button>
-      <ol>
-        {
-          items.map(item => {
-            return <li key={item}>{item}</li>
-          })
-        }
-      </ol>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/auth' element={<Auth />} />
+      </Routes>
     </>
   )
 }

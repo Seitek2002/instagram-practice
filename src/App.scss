@@ -1,0 +1,52 @@
+.auth {
+    @apply h-screen flex flex-col justify-between;
+
+    &-input input {
+        @apply py-3.5 px-4 bg-[#121212] border border-white/50 rounded;
+    }
+
+    &-container {
+        @apply flex flex-col justify-between;
+    }
+
+    &-content {
+        @apply px-4;
+    }
+
+    &-logo {
+        @apply flex justify-center mb-10;
+    }
+
+    &-btn {
+        @apply border-btn-primary bg-btn-primary w-full rounded py-3.5;
+    }
+
+    &-forgot {
+        @apply text-right text-primary mt-5 mb-7;
+    }
+
+    &-havent {
+        @apply text-white/60 text-center;
+
+        span {
+            @apply text-primary;
+        }
+    }
+
+    &-or {
+        @apply relative text-center z-10;
+
+        span {
+            @apply bg-black px-4;
+        }
+
+        &:before {
+            content: '';
+            @apply absolute bg-white/15 w-full h-[1px] left-0 top-1/2 -z-10;
+        }
+    }
+
+    footer {
+        @apply text-center text-white/50 p-8 border border-white/15;
+    }
+}
